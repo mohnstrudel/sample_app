@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "User pages" do
 	subject { page }
 
-  describe "GET /user_pages" do
+  describe "signup page" do
   	before { visit signup_path }
 
   	it { should have_content('Sign up') }
