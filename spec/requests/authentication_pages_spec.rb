@@ -83,6 +83,17 @@ end
 		describe "for non-signed-in users" do
 			let(:user) { FactoryGirl.create(:user) }
 
+			describe "should not show navigation links" do
+				
+
+				it { should_not have_link('Profile') }
+				it { should_not have_link('Settings') }
+				it { should_not have_link('Users') }
+				it { should_not have_link('Sign out') }
+				before { visit signin_path }
+				it { should have_link('Sign in') }
+			end
+
 			describe "when attempting to visit a protected page" do
 				before do
 					visit edit_user_path(user)
