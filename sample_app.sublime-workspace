@@ -216,39 +216,26 @@
 	"buffers":
 	[
 		{
-			"contents": "class StaticPagesController < ApplicationController\n\n	def home\n		if signed_in?\n		@micropost = current_user.microposts.build\n		@feed_items = current_user.feed.paginate(page: params[:page])\n		end\n	end\n\n  def help\n  end\n\n  def about\n  end\n\n  def contact\n  end\nend\n",
-			"file": "app/controllers/static_pages_controller.rb",
-			"file_size": 260,
-			"file_write_time": 130635583570000000,
+			"file": "app/views/microposts/_micropost.html.erb",
 			"settings":
 			{
-				"buffer_size": 261,
+				"buffer_size": 329,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/shared/_feed.html.erb",
-			"settings":
-			{
-				"buffer_size": 170,
-				"line_ending": "Unix",
-				"name": "_feed.html.erb"
 			}
 		},
 		{
 			"file": "app/views/shared/_feed_item.html.erb",
 			"settings":
 			{
-				"buffer_size": 330,
-				"line_ending": "Unix",
-				"name": "_feed_item.html.erb"
+				"buffer_size": 502,
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/static_pages/home.html.erb",
+			"file": "app/views/users/edit.html.erb",
 			"settings":
 			{
-				"buffer_size": 696,
+				"buffer_size": 814,
 				"line_ending": "Unix"
 			}
 		}
@@ -283,12 +270,27 @@
 	[
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app",
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/helpers",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/shared",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/static_pages",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/users",
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/spec",
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/spec/models",
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/spec/requests"
 	],
 	"file_history":
 	[
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/microposts/_single_micropost.html.erb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/shared/_single_micropost.html.erb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/controllers/microposts_controller.rb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/helpers/micropost_helper.rb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/spec/requests/micropost_pages_spec.rb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/controllers/static_pages_controller.rb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/spec/models/user_spec.rb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/shared/_feed.html.erb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/shared/_feed_item.html.erb",
+		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/views/static_pages/home.html.erb",
 		"/Users/mohnstrudel/Web Projects/rails_tutorial/sample_app/app/controllers/sessions_controller.rb",
 		"/Users/mohnstrudel/Web Projects/codeeval/beautifulStrings.rb",
 		"/Users/mohnstrudel/Web Projects/codeeval/beautifulStrings.txt",
@@ -391,57 +393,28 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/static_pages_controller.rb",
+					"file": "app/views/microposts/_micropost.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 261,
+						"buffer_size": 329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								190,
-								190
+								329,
+								329
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/shared/_feed.html.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 170,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								161,
-								161
-							]
-						],
-						"settings":
-						{
-							"auto_name": "_feed.html.erb",
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -452,25 +425,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "app/views/shared/_feed_item.html.erb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 330,
+						"buffer_size": 502,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								325,
-								325
+								8,
+								27
 							]
 						],
 						"settings":
 						{
-							"auto_name": "_feed_item.html.erb",
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -481,20 +453,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/views/static_pages/home.html.erb",
-					"semi_transient": false,
+					"buffer": 2,
+					"file": "app/views/users/edit.html.erb",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 696,
+						"buffer_size": 814,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								696,
-								696
+								0,
+								0
 							]
 						],
 						"settings":
@@ -589,7 +561,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 164.0,
+	"side_bar_width": 186.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
